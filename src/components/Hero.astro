@@ -1,0 +1,48 @@
+---
+import GitHub from "./icons/GitHub.astro"
+import Badge from "./Badge.astro"
+import SocialPills from "./SocialPills.astro"
+import LinkedIn from "./icons/LinkedIn.astro"
+import Mail from "./icons/Mail.astro"
+
+const personalImageAlt = "Txema Lanchazo"
+---
+
+<div class="max-w-xl">
+    <div class="flex gap-4 mb-4">
+        <img
+            class="rounded-full shadow-lg size-16"
+            src="/me.webp"
+            alt={personalImageAlt}
+        />
+        <a
+            href="https://www.linkedin.com/in/txema-lanchazo-serra-108128186/"
+            target="_black"
+            rel="noopener"
+            class="flex justify-center items-center"
+        >
+            <Badge>Disponible para trabajar</Badge>
+        </a>
+    </div>
+    <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">
+        Hey, soy Txema
+    </h1>
+    <p class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
+        +9 años de experiencia. <strong>Desarrollador Fullstack y Instalador de ERPs para Empresas.</strong> De Ibiza, España. 
+        Especializado en impulsar digitalmente empresas creando soluciones únicas.
+    </p>
+    <nav class="flex flex-wrap gap-4 mt-8">
+        <SocialPills href="mailto:txema@desdesdecero.com">
+            <Mail class="size-4"/>
+            Contáctame
+        </SocialPills>
+        <SocialPills href="https://github.com/tito1984">
+            <GitHub class="size-4" />
+            Github
+        </SocialPills>
+        <SocialPills href="https://www.linkedin.com/in/txema-lanchazo-serra-108128186/">
+            <LinkedIn class="size-4"/>
+            LinkedIn
+        </SocialPills>
+    </nav>
+</div>
