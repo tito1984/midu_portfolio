@@ -1,11 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
 import SectionContainer from "../components/SectionContainer.astro";
-import LinkedIn from "../components/icons/LinkedIn.astro";
-import SocialPills from "../components/SocialPills.astro";
-import GitHub from "../components/icons/GitHub.astro";
-import Mail from "../components/icons/Mail.astro";
 import Experience from "../components/Experience.astro";
 import BriefCase from "../components/icons/BriefCase.astro";
 import Code from "../components/icons/Code.astro";
@@ -20,37 +15,38 @@ import ProfileCheck from "../components/icons/ProfileCheck.astro";
 	description="Txema Lanchazo Serra en DesarrolloDesdeCero. Desarrollador FullStack y implantantador de ERPs a empresas. Especialista en crear aplicaciones únicas."
 >
 	<main class="px-4">
-		<SectionContainer class="py-44 pb-24">
+		<SectionContainer class="py-16 md:py-36">
 			<Hero />
 		</SectionContainer>
+
+		<div class="space-y-24">
+			<SectionContainer id="experiencia">
+				<h2
+					class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+				>
+					<BriefCase class="size-8" />
+					Experiencia laboral
+				</h2>
+				<Experience />
+			</SectionContainer>
+			<SectionContainer id="proyectos">
+				<h2
+					class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+				>
+					<Code class="size-7" />
+					Proyectos recientes
+				</h2>
+				<Projects />
+			</SectionContainer>
+			<SectionContainer id="sobre-mi">
+				<h2
+					class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+				>
+					<ProfileCheck class="size-8" />
+					Sobre mí
+				</h2>
+				<AboutMe />
+			</SectionContainer>
+		</div>
 	</main>
-	<div class="space-y-24">
-		<SectionContainer id="experiencia">
-			<h2
-				class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-			>
-				<BriefCase class="size-7" />
-				Experiencia laboral
-			</h2>
-			<Experience />
-		</SectionContainer>
-		<SectionContainer id="proyectos">
-			<h2
-				class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-			>
-				<Code class="size-7" />
-				Proyectos
-			</h2>
-			<Projects />
-		</SectionContainer>
-		<SectionContainer id="sobre-mi">
-			<h2
-				class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
-			>
-				<ProfileCheck class="size-8" />
-				Sobre mí
-			</h2>
-			<AboutMe />
-		</SectionContainer>
-	</div>
 </Layout>
